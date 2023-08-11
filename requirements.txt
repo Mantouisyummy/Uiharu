@@ -1,0 +1,4 @@
+aiohttp==3.8.5
+async_poe_client==0.2.8
+disnake==2.8.1
+pymongo==4.4.1

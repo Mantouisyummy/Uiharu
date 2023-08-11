@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "uiharuremake"
+version = "0.1.0"
+description = ""
+authors = ["Nat1an <nathan@nat1an.xyz>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiohttp = "^3.8.5"
+disnake = "^2.9.0"
+httpx = "^0.24.1"
+requests = "^2.31.0"
+pymongo = {extras = ["srv"], version = "^4.4.1"}
+
+
+[tool.poetry.group.dev.dependencies]
+doppler-env = "^0.3.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
