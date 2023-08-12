@@ -25,7 +25,7 @@ class Uiharu(OriginalBot):
         )["main"]
 
         self.poe = PoeClient(
-            "FfeMrboS3SNgmI69DB5O5g%3D%3D", "c3927bd245fe72be54e5126ff689c6aa"
+            getenv("PB_TOKEN"), getenv("FORMKEY")
         )
 
         self.nickname_manager = NicknameManager(self)
