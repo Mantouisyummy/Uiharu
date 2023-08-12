@@ -28,8 +28,10 @@ class Conversation:
     async def ask(self, text: str) -> str:
         while not self.ready:
             await asyncio.sleep(1)
-
-        return await self.chat.talk(text)
+        if self.nickname:
+            return await self.chat.talk(f"({self.nickname}) " + text)
+        else:
+            return await self.chat.talk(text)
 
     async def setup(self):
         """
@@ -66,6 +68,5 @@ class ConversationManager:
         )
 
         await self.conversations[user_id].setup()
-        print("??")
 
         return self.conversations[user_id]
